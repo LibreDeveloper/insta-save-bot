@@ -12,7 +12,7 @@ a simple telegram bot to download media from instagram.
     2. Using webhook method, best for pyton hosts like Heroku
 ## Where can i run the bot?
 1. Heroku
-  - Best for both polling and webhook method BUT, they're gonna remove there free tier in future!
+  - Best for both polling and webhook method BUT, they are gonna remove there free tier in future!
 2. Pythonanywhere
   - you can use polling method in this website for free!
 
