@@ -26,7 +26,6 @@ def echo(update: Update, context: CallbackContext):
     # check for post
     if "https://www.instagram.com/p/" in user_msg or "https://www.instagram.com/tv/" in user_msg or "https://www.instagram.com/reel/" in user_msg:
         print('post detected')
-        db.update_dl(user_id)
         media_info = media.mediaUrl(user_msg)
         if len(media_info) > 1:
             context.bot.delete_message(chat_id, dl_msg.message_id)
@@ -59,7 +58,6 @@ def echo(update: Update, context: CallbackContext):
                 text="🔒 This post is private!")
     # check for profile
     else:
-        db.update_dl(user_id)
         print('username detected')
         username = user_msg.split('?')[0].replace('www.', '').replace("https://instagram.com/", '').replace(' ',
                                                                                                             '').replace(
